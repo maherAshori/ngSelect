@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title>Ui Bootstrao Select Form</title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="/Content/ngSelect.css" rel="stylesheet" />
+</head>
+<body ng-controller="appCtrl">
+    <div class="container">
+        <br />
+        <form method="get">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <ng-select ng-model="selectMe"
+                               options="items"
+                               searchable="true"
+                               output="name"
+                               set-by-id="true"
+                               set-by-name="true"></ng-select>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="Scripts/jquery-2.1.4.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/angular.js"></script>
+    <script src="/Scripts/ngSelect.min.js"></script>
+    <script>
+        var app = angular.module("app", ["ngSelect"]);
+
+        app.controller("appCtrl", function ($scope) {
+            $scope.items = [
+                { name: "Css", id: 1, value: "css" },
+                { name: "Bootstrap", id: 2, value: "bootstrap" },
+                { name: "PHP", id: 3, value: "php" }
+            ];
+        });
+    </script>
+</body>
+</html>

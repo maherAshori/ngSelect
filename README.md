@@ -20,38 +20,45 @@ Angular Select Options Directive [UI]
 - set-by-name: bool [this help you to set a default option by name] ex: $scope.selectMe = {name: "Css"}; [default is 'value']
 
 <h1>default option is first one</h1>
-OR you can set by value as default $scope.selectMe = {value: "php"};
+OR you can set by value as default $scope.selectMe = {value: "bootstrap"};
 ```html
 <ng-select ng-model="selectMe" options="options"></ng-select>
 ```
-Output is 'object' >> { name: "PHP", id: 3, value: "php", active: true }
-
+Output is 'object' >> { name: "Bootstrap", id: 2, value: "bootstrap" }
 <img src="http://cdn.persiangig.com/preview/lUhS6OSy5o/1.jpg">
 
 <h1>default option set by id</h1>
-$scope.selectMe = {id: 3};
+$scope.selectMe = {id: 2};
 ```html
 <ng-select 
 ng-model="selectMe"
-options="items"
-searchable="true"
-output="name"
-set-by-id="true">
+options="options"
+set-by-id="true"
+output="name">
 </ng-select>
 ```
-Output is 'name' >> "PHP"
+Output is 'name' >> "Bootstrap"
+<img src="http://cdn.persiangig.com/preview/8bRKrVWw2V/2.jpg">
 
 <h1>default option set by name</h1>
-$scope.selectMe = {name: "PHP"};
+$scope.selectMe = {name: "Bootstrap"};
 ```html
 <ng-select 
 ng-model="selectMe"
-options="items"
-searchable="true"
-output="value"
+options="options"
+output="id"
 set-by-name="true">
 </ng-select>
 ```
-Output is 'value' >> "php"
+Output is 'id' >> "2"
+<img src="http://cdn.persiangig.com/preview/FMJbQ8ENbZ/3.jpg">
 
-
+<h1>Searchable</h1>
+```html
+<ng-select 
+ng-model="selectMe"
+options="options"
+searchable="true">
+</ng-select>
+```
+<img src="http://cdn.persiangig.com/preview/4TLA1eRwLO/4.jpg">

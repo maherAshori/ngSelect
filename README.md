@@ -1,6 +1,8 @@
 # ngSelect
 Angular Select Options Directive [UI]
 
+- nuget link : <a href="https://www.nuget.org/packages/ngSelect" target="_blank">ngSelect</a>
+
 <h1>Start</h1>
 - add js & css files
 - inject "ngSelect" in your app module

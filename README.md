@@ -20,11 +20,13 @@ var app = angular.module("app", ["ngSelect"]);
 <h1>settings</h1>
 
 - options: array ex: 
+```html
    $scope.options = [
       { name: "Css", id: 1, value: "css" },
       { name: "Bootstrap", id: 2, value: "bootstrap" },
       { name: "PHP", id: 3, value: "php" }
     ];
+```
 - searchable: bool [true, false]
 - output: object parameters [in top example is: "name" OR "id", OR "value"]
 - set-by-id: bool [this help you to set a default option by id] ex: $scope.selectMe = {id: 1};

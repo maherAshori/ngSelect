@@ -1,7 +1,16 @@
 # ngSelect
 Angular Select Options Directive [UI]
 
-<h1></h1>
+<h1>Start</h1>
+- add js & css files
+- inject "ngSelect" in your app module
+- use ng-select element in your html
+
+```html
+var app = angular.module("app", ["ngSelect"]);
+```
+
+<h1>ngSelect</h1>
 ```html
 <ng-select ng-model="selectMe"></ng-select>
 ```

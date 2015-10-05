@@ -1,4 +1,4 @@
-# ngSelect
+# ngSelect v1.0.1
 Angular Select Options Directive [UI]
 
 - nuget link : <a href="https://www.nuget.org/packages/ngSelect" target="_blank">ngSelect</a>

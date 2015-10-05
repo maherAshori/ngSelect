@@ -22,15 +22,18 @@ var app = angular.module("app", ["ngSelect"]);
 - options: array ex: 
 ```html
    $scope.options = [
-      { name: "Css", id: 1, value: "css" },
-      { name: "Bootstrap", id: 2, value: "bootstrap" },
-      { name: "PHP", id: 3, value: "php" }
+      { name: "Css", disc: "somthing about css", id: 1, value: "css" },
+      { name: "Bootstrap", disc: "somthing about bootstrap", id: 2, value: "bootstrap" },
+      { name: "PHP", disc: "somthing about php", id: 3, value: "php" }
     ];
 ```
 - searchable: bool [true, false]
-- output: object parameters [in top example is: "name" OR "id", OR "value"]
+- output: object parameters [in top example is: "name" OR "id", OR "value" OR "disc"]
+- show-as: object parameters [in top example is: "name" OR "id", OR "value" OR "disc"]
 - set-by-id: bool [this help you to set a default option by id] ex: $scope.selectMe = {id: 1};
 - set-by-name: bool [this help you to set a default option by name] ex: $scope.selectMe = {name: "Css"}; [default is 'value']
+- disabled: "disabled"
+- rtl: bool [support rtl mode for 'farsi' or 'arabic']
 
 <h1>default option is first one</h1>
 OR you can set by value as default $scope.selectMe = {value: "bootstrap"};
@@ -48,6 +51,7 @@ $scope.selectMe = {id: 2};
 ng-model="selectMe"
 options="options"
 set-by-id="true"
+show-as="disc"
 output="name">
 </ng-select>
 ```

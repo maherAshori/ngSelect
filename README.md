@@ -25,6 +25,7 @@ OR you can set by value as default $scope.selectMe = {value: "bootstrap"};
 <ng-select ng-model="selectMe" options="options"></ng-select>
 ```
 Output is 'object' >> { name: "Bootstrap", id: 2, value: "bootstrap" }
+<hr>
 <img src="http://cdn.persiangig.com/preview/lUhS6OSy5o/1.jpg">
 
 <h1>default option set by id</h1>
@@ -38,6 +39,7 @@ output="name">
 </ng-select>
 ```
 Output is 'name' >> "Bootstrap"
+<hr>
 <img src="http://cdn.persiangig.com/preview/8bRKrVWw2V/2.jpg">
 
 <h1>default option set by name</h1>
@@ -51,6 +53,7 @@ set-by-name="true">
 </ng-select>
 ```
 Output is 'id' >> "2"
+<hr>
 <img src="http://cdn.persiangig.com/preview/FMJbQ8ENbZ/3.jpg">
 
 <h1>Searchable</h1>
@@ -61,4 +64,5 @@ options="options"
 searchable="true">
 </ng-select>
 ```
+<hr>
 <img src="http://cdn.persiangig.com/preview/4TLA1eRwLO/4.jpg">

@@ -92,4 +92,7 @@ searchable="true">
 </ng-select>
 ```
 <hr>
-<img src="http://cdn.persiangig.com/preview/4TLA1eRwLO/4.jpg">
+<img src="http://cdn.persiangig.com/preview/Bk1k98Fevu/5.jpg">
+
+<h5>search not found</h5>
+<img src="http://cdn.persiangig.com/preview/hpNNvW5eIn/6.jpg">

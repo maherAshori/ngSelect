@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Ngselect by maherAshori</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Ngselect</h1>
+        <h2>Angular Select Options Directive [UI]</h2>
+        <a href="https://github.com/maherAshori/ngSelect" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="ngselect-v102" class="anchor" href="#ngselect-v102" aria-hidden="true"><span class="octicon octicon-link"></span></a>ngSelect v1.0.2</h1>
+
+<p>Angular Select Options Directive [UI]</p>
+
+<ul>
+<li>nuget link : <a href="https://www.nuget.org/packages/ngSelect" target="_blank">ngSelect</a>
+</li>
+</ul>
+
+<h1>
+<a id="release-note" class="anchor" href="#release-note" aria-hidden="true"><span class="octicon octicon-link"></span></a>Release Note:</h1>
+
+<ul>
+<li>Set a default option at loading without click on target</li>
+<li>Add glyphicon icons to the project u no need to glyphicon bootstrap icons</li>
+<li>Reset search result on mouse leave</li>
+<li>Add search not found when searching faild</li>
+<li>Add remove search value</li>
+<li>Update Css and Angularjs</li>
+</ul>
+
+<h1>
+<a id="start" class="anchor" href="#start" aria-hidden="true"><span class="octicon octicon-link"></span></a>Start</h1>
+
+<ul>
+<li>add js &amp; css files</li>
+<li>inject "ngSelect" in your app module</li>
+<li>use ng-select element in your html</li>
+</ul>
+
+<div class="highlight highlight-text-html-basic"><pre>var app = angular.module("app", ["ngSelect"]);</pre></div>
+
+<h1>
+<a id="ngselect" class="anchor" href="#ngselect" aria-hidden="true"><span class="octicon octicon-link"></span></a>ngSelect</h1>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">ng</span><span class="pl-e">-select</span> <span class="pl-e">ng-model</span>=<span class="pl-s"><span class="pl-pds">"</span>selectMe<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">ng</span><span class="pl-e">-select</span>&gt;</pre></div>
+
+<h1>
+<a id="settings" class="anchor" href="#settings" aria-hidden="true"><span class="octicon octicon-link"></span></a>settings</h1>
+
+<ul>
+<li>options: array ex: </li>
+</ul>
+
+<div class="highlight highlight-text-html-basic"><pre>   $scope.options = [
+      { name: "Css", disc: "somthing about css", id: 1, value: "css" },
+      { name: "Bootstrap", disc: "somthing about bootstrap", id: 2, value: "bootstrap" },
+      { name: "PHP", disc: "somthing about php", id: 3, value: "php" }
+    ];</pre></div>
+
+<ul>
+<li>searchable: bool [true, false]</li>
+<li>search-not-found: "string" [ex: Not Found]</li>
+<li>output: object parameters [in top example is: "name" OR "id", OR "value" OR "disc"]</li>
+<li>show-as: object parameters [in top example is: "name" OR "id", OR "value" OR "disc"]</li>
+<li>set-by-id: bool [this help you to set a default option by id] ex: $scope.selectMe = {id: 1};</li>
+<li>set-by-name: bool [this help you to set a default option by name] ex: $scope.selectMe = {name: "Css"}; [default is 'value']</li>
+<li>disabled: "disabled"</li>
+<li>rtl: bool [support rtl mode for 'farsi' or 'arabic']</li>
+</ul>
+
+<h1>
+<a id="default-option-is-first-one" class="anchor" href="#default-option-is-first-one" aria-hidden="true"><span class="octicon octicon-link"></span></a>default option is first one</h1>
+
+<p>OR you can set by value as default $scope.selectMe = {value: "bootstrap"};</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">ng</span><span class="pl-e">-select</span> <span class="pl-e">ng-model</span>=<span class="pl-s"><span class="pl-pds">"</span>selectMe<span class="pl-pds">"</span></span> <span class="pl-e">options</span>=<span class="pl-s"><span class="pl-pds">"</span>options<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">ng</span><span class="pl-e">-select</span>&gt;</pre></div>
+
+<p>Output is 'object' &gt;&gt; { name: "Bootstrap", id: 2, value: "bootstrap" }</p>
+
+<hr>
+
+<p><img src="http://cdn.persiangig.com/preview/lUhS6OSy5o/1.jpg"></p>
+
+<h1>
+<a id="default-option-set-by-id" class="anchor" href="#default-option-set-by-id" aria-hidden="true"><span class="octicon octicon-link"></span></a>default option set by id</h1>
+
+<p>$scope.selectMe = {id: 2};</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">ng</span><span class="pl-e">-select</span> 
+ng<span class="pl-e">-model</span>=<span class="pl-s"><span class="pl-pds">"</span>selectMe<span class="pl-pds">"</span></span>
+options=<span class="pl-s"><span class="pl-pds">"</span>options<span class="pl-pds">"</span></span>
+set<span class="pl-e">-by-id</span>=<span class="pl-s"><span class="pl-pds">"</span>true<span class="pl-pds">"</span></span>
+show<span class="pl-e">-as</span>=<span class="pl-s"><span class="pl-pds">"</span>disc<span class="pl-pds">"</span></span>
+output=<span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span>&gt;
+&lt;/<span class="pl-ent">ng</span><span class="pl-e">-select</span>&gt;</pre></div>
+
+<p>Output is 'name' &gt;&gt; "Bootstrap"</p>
+
+<hr>
+
+<p><img src="http://cdn.persiangig.com/preview/8bRKrVWw2V/2.jpg"></p>
+
+<h1>
+<a id="default-option-set-by-name" class="anchor" href="#default-option-set-by-name" aria-hidden="true"><span class="octicon octicon-link"></span></a>default option set by name</h1>
+
+<p>$scope.selectMe = {name: "Bootstrap"};</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">ng</span><span class="pl-e">-select</span> 
+ng<span class="pl-e">-model</span>=<span class="pl-s"><span class="pl-pds">"</span>selectMe<span class="pl-pds">"</span></span>
+options=<span class="pl-s"><span class="pl-pds">"</span>options<span class="pl-pds">"</span></span>
+output=<span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span>
+set<span class="pl-e">-by-name</span>=<span class="pl-s"><span class="pl-pds">"</span>true<span class="pl-pds">"</span></span>&gt;
+&lt;/<span class="pl-ent">ng</span><span class="pl-e">-select</span>&gt;</pre></div>
+
+<p>Output is 'id' &gt;&gt; "2"</p>
+
+<hr>
+
+<p><img src="http://cdn.persiangig.com/preview/FMJbQ8ENbZ/3.jpg"></p>
+
+<h1>
+<a id="searchable" class="anchor" href="#searchable" aria-hidden="true"><span class="octicon octicon-link"></span></a>Searchable</h1>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">ng</span><span class="pl-e">-select</span> 
+ng<span class="pl-e">-model</span>=<span class="pl-s"><span class="pl-pds">"</span>selectMe<span class="pl-pds">"</span></span>
+options=<span class="pl-s"><span class="pl-pds">"</span>options<span class="pl-pds">"</span></span>
+search<span class="pl-e">-not-found</span>=<span class="pl-s"><span class="pl-pds">"</span>not found!<span class="pl-pds">"</span></span>
+searchable=<span class="pl-s"><span class="pl-pds">"</span>true<span class="pl-pds">"</span></span>&gt;
+&lt;/<span class="pl-ent">ng</span><span class="pl-e">-select</span>&gt;</pre></div>
+
+<hr>
+
+<p><img src="http://cdn.persiangig.com/preview/Bk1k98Fevu/5.jpg"></p>
+
+<h5>
+<a id="search-not-found" class="anchor" href="#search-not-found" aria-hidden="true"><span class="octicon octicon-link"></span></a>search not found</h5>
+
+<p><img src="http://cdn.persiangig.com/preview/hpNNvW5eIn/6.jpg"></p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/maherAshori/ngSelect/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/maherAshori/ngSelect/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/maherAshori/ngSelect"></a> is maintained by <a href="https://github.com/maherAshori">maherAshori</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>

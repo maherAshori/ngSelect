@@ -1,7 +1,15 @@
-# ngSelect v1.0.1
+# ngSelect v1.0.2
 Angular Select Options Directive [UI]
 
 - nuget link : <a href="https://www.nuget.org/packages/ngSelect" target="_blank">ngSelect</a>
+
+<h1>Release Note:</h1>
+- Set a default option at loading without click on target
+- Add glyphicon icons to the project u no need to glyphicon bootstrap icons
+- Reset search result on mouse leave
+- Add search not found when searching faild
+- Add remove search value
+- Update Css and Angularjs
 
 <h1>Start</h1>
 - add js & css files
@@ -28,6 +36,7 @@ var app = angular.module("app", ["ngSelect"]);
     ];
 ```
 - searchable: bool [true, false]
+- search-not-found: "string" [ex: Not Found]
 - output: object parameters [in top example is: "name" OR "id", OR "value" OR "disc"]
 - show-as: object parameters [in top example is: "name" OR "id", OR "value" OR "disc"]
 - set-by-id: bool [this help you to set a default option by id] ex: $scope.selectMe = {id: 1};
@@ -78,6 +87,7 @@ Output is 'id' >> "2"
 <ng-select 
 ng-model="selectMe"
 options="options"
+search-not-found="not found!"
 searchable="true">
 </ng-select>
 ```

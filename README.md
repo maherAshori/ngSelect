@@ -1,15 +1,14 @@
-# ngSelect v1.0.2
+# ngSelect v1.0.3
 Angular Select Options Directive [UI]
 
 - nuget link : <a href="https://www.nuget.org/packages/ngSelect" target="_blank">ngSelect</a>
 
 <h1>Release Note:</h1>
-- Set a default option at loading without click on target
-- Add glyphicon icons to the project u no need to glyphicon bootstrap icons
-- Reset search result on mouse leave
-- Add search not found when searching faild
-- Add remove search value
-- Update Css and Angularjs
+- Update css style
+- Update disabled="disabled" to ng-disabled="true/false"
+- Add result search length in the bottom
+- Add "limit-to" for binding options data
+- Handle some errors in the Css & Directive when use two or more ng-select in 1 page
 
 <h1>Start</h1>
 - add js & css files
@@ -41,8 +40,9 @@ var app = angular.module("app", ["ngSelect"]);
 - show-as: object parameters [in top example is: "name" OR "id", OR "value" OR "disc"]
 - set-by-id: bool [this help you to set a default option by id] ex: $scope.selectMe = {id: 1};
 - set-by-name: bool [this help you to set a default option by name] ex: $scope.selectMe = {name: "Css"}; [default is 'value']
-- disabled: "disabled"
+- ng-disabled: bool [true, false]
 - rtl: bool [support rtl mode for 'farsi' or 'arabic']
+- limit-to: int [show 5 options or more; Note: search is including all of data]
 
 <h1>default option is first one</h1>
 OR you can set by value as default $scope.selectMe = {value: "bootstrap"};
@@ -92,7 +92,34 @@ searchable="true">
 </ng-select>
 ```
 <hr>
-<img src="http://cdn.persiangig.com/preview/Bk1k98Fevu/5.jpg">
+<img src="http://cdn.persiangig.com/preview/V2n965rMt9/7.jpg">
 
 <h5>search not found</h5>
-<img src="http://cdn.persiangig.com/preview/hpNNvW5eIn/6.jpg">
+<img src="http://cdn.persiangig.com/preview/PGDDgAWU1f/8.jpg">
+
+<h1>Limit To</h1>
+<h5>in your controller</h5>
+```html
+$scope.options = [
+   { name: "Css", disc: "css", id: 1, value: "css" },
+   { name: "Bootstrap", disc: "bootstrap", id: 2, value: "bootstrap" },
+   { name: "PHP", disc: "php", id: 3, value: "php" },
+   { name: "C#", disc: "c#", id: 3, value: "c#" },
+   { name: "Angular", disc: "angular", id: 4, value: "angular" },
+   { name: "WPF", disc: "wpf", id: 5, value: "wpf" },
+   { name: "CakePHP", disc: "cakephp", id: 6, value: "cakephp" },
+   { name: "LazyLoad", disc: "lazyLoad", id: 7, value: "lazyLoad" }
+];
+```
+<h5>in your html</h5>
+```html
+<ng-select 
+ng-model="selectMe"
+options="options"
+search-not-found="not found!"
+limit-to='4'
+searchable="true">
+</ng-select>
+```
+<hr>
+<img src="http://cdn.persiangig.com/preview/nvYddn4JO7/9.jpg">

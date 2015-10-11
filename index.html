@@ -29,7 +29,7 @@
       <div class="inner clearfix">
         <section id="main-content">
           <h1>
-<a id="ngselect-v102" class="anchor" href="#ngselect-v102" aria-hidden="true"><span class="octicon octicon-link"></span></a>ngSelect v1.0.2</h1>
+<a id="ngselect-v103" class="anchor" href="#ngselect-v103" aria-hidden="true"><span class="octicon octicon-link"></span></a>ngSelect v1.0.3</h1>
 
 <p>Angular Select Options Directive [UI]</p>
 
@@ -42,12 +42,11 @@
 <a id="release-note" class="anchor" href="#release-note" aria-hidden="true"><span class="octicon octicon-link"></span></a>Release Note:</h1>
 
 <ul>
-<li>Set a default option at loading without click on target</li>
-<li>Add glyphicon icons to the project u no need to glyphicon bootstrap icons</li>
-<li>Reset search result on mouse leave</li>
-<li>Add search not found when searching faild</li>
-<li>Add remove search value</li>
-<li>Update Css and Angularjs</li>
+<li>Update css style</li>
+<li>Update disabled="disabled" to ng-disabled="true/false"</li>
+<li>Add result search length in the bottom</li>
+<li>Add "limit-to" for binding options data</li>
+<li>Handle some errors in the Css &amp; Directive when use two or more ng-select in 1 page</li>
 </ul>
 
 <h1>
@@ -86,8 +85,9 @@
 <li>show-as: object parameters [in top example is: "name" OR "id", OR "value" OR "disc"]</li>
 <li>set-by-id: bool [this help you to set a default option by id] ex: $scope.selectMe = {id: 1};</li>
 <li>set-by-name: bool [this help you to set a default option by name] ex: $scope.selectMe = {name: "Css"}; [default is 'value']</li>
-<li>disabled: "disabled"</li>
+<li>ng-disabled: bool [true, false]</li>
 <li>rtl: bool [support rtl mode for 'farsi' or 'arabic']</li>
+<li>limit-to: int [show 5 options or more; Note: search is including all of data]</li>
 </ul>
 
 <h1>
@@ -152,12 +152,44 @@ searchable=<span class="pl-s"><span class="pl-pds">"</span>true<span class="pl-p
 
 <hr>
 
-<p><img src="http://cdn.persiangig.com/preview/Bk1k98Fevu/5.jpg"></p>
+<p><img src="http://cdn.persiangig.com/preview/V2n965rMt9/7.jpg"></p>
 
 <h5>
 <a id="search-not-found" class="anchor" href="#search-not-found" aria-hidden="true"><span class="octicon octicon-link"></span></a>search not found</h5>
 
-<p><img src="http://cdn.persiangig.com/preview/hpNNvW5eIn/6.jpg"></p>
+<p><img src="http://cdn.persiangig.com/preview/PGDDgAWU1f/8.jpg"></p>
+
+<h1>
+<a id="limit-to" class="anchor" href="#limit-to" aria-hidden="true"><span class="octicon octicon-link"></span></a>Limit To</h1>
+
+<h5>
+<a id="in-your-controller" class="anchor" href="#in-your-controller" aria-hidden="true"><span class="octicon octicon-link"></span></a>in your controller</h5>
+
+<div class="highlight highlight-text-html-basic"><pre>$scope.options = [
+   { name: "Css", disc: "css", id: 1, value: "css" },
+   { name: "Bootstrap", disc: "bootstrap", id: 2, value: "bootstrap" },
+   { name: "PHP", disc: "php", id: 3, value: "php" },
+   { name: "C#", disc: "c#", id: 3, value: "c#" },
+   { name: "Angular", disc: "angular", id: 4, value: "angular" },
+   { name: "WPF", disc: "wpf", id: 5, value: "wpf" },
+   { name: "CakePHP", disc: "cakephp", id: 6, value: "cakephp" },
+   { name: "LazyLoad", disc: "lazyLoad", id: 7, value: "lazyLoad" }
+];</pre></div>
+
+<h5>
+<a id="in-your-html" class="anchor" href="#in-your-html" aria-hidden="true"><span class="octicon octicon-link"></span></a>in your html</h5>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">ng</span><span class="pl-e">-select</span> 
+ng<span class="pl-e">-model</span>=<span class="pl-s"><span class="pl-pds">"</span>selectMe<span class="pl-pds">"</span></span>
+options=<span class="pl-s"><span class="pl-pds">"</span>options<span class="pl-pds">"</span></span>
+search<span class="pl-e">-not-found</span>=<span class="pl-s"><span class="pl-pds">"</span>not found!<span class="pl-pds">"</span></span>
+limit<span class="pl-e">-to</span>=<span class="pl-s"><span class="pl-pds">'</span>4<span class="pl-pds">'</span></span>
+searchable=<span class="pl-s"><span class="pl-pds">"</span>true<span class="pl-pds">"</span></span>&gt;
+&lt;/<span class="pl-ent">ng</span><span class="pl-e">-select</span>&gt;</pre></div>
+
+<hr>
+
+<p><img src="http://cdn.persiangig.com/preview/nvYddn4JO7/9.jpg"></p>
         </section>
 
         <aside id="sidebar">

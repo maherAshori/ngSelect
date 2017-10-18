@@ -48,6 +48,7 @@ $scope.options = [
 
 <h1>default option is first one</h1>
 OR you can set by value as default $scope.selectMe = {value: "bootstrap"};
+
 ```html
 <ng-select ng-model="selectMe" options="options"></ng-select>
 ```

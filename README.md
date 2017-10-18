@@ -20,19 +20,21 @@ var app = angular.module("app", ["ngSelect"]);
 ```
 
 <h1>ngSelect</h1>
+
 ```html
 <ng-select ng-model="selectMe"></ng-select>
 ```
 
 <h1>settings</h1>
 
-- options: array ex: 
+- options: array ex:
+
 ```html
-   $scope.options = [
-      { name: "Css", disc: "somthing about css", id: 1, value: "css" },
-      { name: "Bootstrap", disc: "somthing about bootstrap", id: 2, value: "bootstrap" },
-      { name: "PHP", disc: "somthing about php", id: 3, value: "php" }
-    ];
+$scope.options = [
+   { name: "Css", disc: "somthing about css", id: 1, value: "css" },
+   { name: "Bootstrap", disc: "somthing about bootstrap", id: 2, value: "bootstrap" },
+   { name: "PHP", disc: "somthing about php", id: 3, value: "php" }
+];
 ```
 - searchable: bool [true, false]
 - search-not-found: "string" [ex: Not Found]
@@ -55,6 +57,7 @@ Output is 'object' >> { name: "Bootstrap", id: 2, value: "bootstrap" }
 
 <h1>default option set by id</h1>
 $scope.selectMe = {id: 2};
+
 ```html
 <ng-select 
 ng-model="selectMe"
@@ -64,12 +67,14 @@ show-as="disc"
 output="name">
 </ng-select>
 ```
+
 Output is 'name' >> "Bootstrap"
 <hr>
 <img src="http://cdn.persiangig.com/preview/8bRKrVWw2V/2.jpg">
 
 <h1>default option set by name</h1>
 $scope.selectMe = {name: "Bootstrap"};
+
 ```html
 <ng-select 
 ng-model="selectMe"
@@ -78,11 +83,13 @@ output="id"
 set-by-name="true">
 </ng-select>
 ```
+
 Output is 'id' >> "2"
 <hr>
 <img src="http://cdn.persiangig.com/preview/FMJbQ8ENbZ/3.jpg">
 
 <h1>Searchable</h1>
+
 ```html
 <ng-select 
 ng-model="selectMe"
@@ -99,6 +106,7 @@ searchable="true">
 
 <h1>Limit To</h1>
 <h5>in your controller</h5>
+
 ```html
 $scope.options = [
    { name: "Css", disc: "css", id: 1, value: "css" },
@@ -112,6 +120,7 @@ $scope.options = [
 ];
 ```
 <h5>in your html</h5>
+
 ```html
 <ng-select 
 ng-model="selectMe"
